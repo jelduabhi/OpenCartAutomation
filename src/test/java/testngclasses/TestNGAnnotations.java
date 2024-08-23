@@ -27,6 +27,7 @@ public class TestNGAnnotations extends TestNGMethods {
     @Test(groups = {"regression","login"})
     public void test4(){
         System.out.println("TestNGAnnotations test 4");
+        Assert.fail();
     }
 
     @Parameters({"URL","BROWSER"})
