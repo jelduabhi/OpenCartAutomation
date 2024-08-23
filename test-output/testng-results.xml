@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-20T10:33:31 IST" name="All Test Suite" finished-at="2024-08-20T10:33:31 IST" duration-ms="149">
+    <groups>
+      <group name="product">
+        <method signature="TestAnnotations2.test2()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" name="test2" class="testngclasses.TestAnnotations2"/>
+        <method signature="TestAnnotations2.test3()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" name="test3" class="testngclasses.TestAnnotations2"/>
+        <method signature="TestAnnotations2.test4()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" name="test4" class="testngclasses.TestAnnotations2"/>
+      </group> <!-- product -->
+      <group name="regression">
+        <method signature="TestAnnotations2.test2()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" name="test2" class="testngclasses.TestAnnotations2"/>
+        <method signature="TestAnnotations2.test3()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" name="test3" class="testngclasses.TestAnnotations2"/>
+        <method signature="TestAnnotations2.test4()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" name="test4" class="testngclasses.TestAnnotations2"/>
+        <method signature="TestNGAnnotations.test2()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" name="test2" class="testngclasses.TestNGAnnotations"/>
+        <method signature="TestNGAnnotations.test3()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" name="test3" class="testngclasses.TestNGAnnotations"/>
+        <method signature="TestNGAnnotations.test4()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" name="test4" class="testngclasses.TestNGAnnotations"/>
+      </group> <!-- regression -->
+      <group name="login">
+        <method signature="TestNGAnnotations.test2()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" name="test2" class="testngclasses.TestNGAnnotations"/>
+        <method signature="TestNGAnnotations.test3()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" name="test3" class="testngclasses.TestNGAnnotations"/>
+        <method signature="TestNGAnnotations.test4()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" name="test4" class="testngclasses.TestNGAnnotations"/>
+      </group> <!-- login -->
+    </groups>
+    <test started-at="2024-08-20T10:33:31 IST" name="Open Source Test" finished-at="2024-08-20T10:33:31 IST" duration-ms="149">
+      <class name="testngclasses.TestNGAnnotations">
+        <test-method signature="test2()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" started-at="2024-08-20T10:33:31 IST" name="test2" finished-at="2024-08-20T10:33:31 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test3()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" started-at="2024-08-20T10:33:31 IST" name="test3" finished-at="2024-08-20T10:33:31 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method signature="test4()[pri:0, instance:testngclasses.TestNGAnnotations@13e39c73]" started-at="2024-08-20T10:33:31 IST" name="test4" finished-at="2024-08-20T10:33:31 IST" duration-ms="4" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.fail(Assert.java:116)
+at testngclasses.TestNGAnnotations.test4(TestNGAnnotations.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+      </class> <!-- testngclasses.TestNGAnnotations -->
+      <class name="testngclasses.TestAnnotations2">
+        <test-method signature="test2()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" started-at="2024-08-20T10:33:31 IST" name="test2" finished-at="2024-08-20T10:33:31 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test3()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" started-at="2024-08-20T10:33:31 IST" name="test3" finished-at="2024-08-20T10:33:31 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method signature="test4()[pri:0, instance:testngclasses.TestAnnotations2@4b0b0854]" started-at="2024-08-20T10:33:31 IST" name="test4" finished-at="2024-08-20T10:33:31 IST" duration-ms="8" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.fail(Assert.java:116)
+at testngclasses.TestAnnotations2.test4(TestAnnotations2.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+      </class> <!-- testngclasses.TestAnnotations2 -->
+    </test> <!-- Open Source Test -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
