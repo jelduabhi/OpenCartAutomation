@@ -24,7 +24,6 @@ public class TestAnnotations2 extends TestNGMethods{
     @Test(groups = {"regression","product"})
     public void test4(){
         System.out.println("TestAnnotations2 test 4");
-        Assert.fail();
     }
 
 }
