@@ -14,7 +14,7 @@ public class ExtentReporter extends  CommonMethods{
 public static String reportPath;
 static ExtentReports extentReporter;
 static ExtentSparkReporter sparkReporter;
-static ExtentTest extentTest;
+static ThreadLocal<ExtentTest> extentTest=new ThreadLocal<>();
 
     public static void initReport(){
         String path=System.getProperty("user.dir")+"\\Reports\\";
@@ -27,7 +27,7 @@ static ExtentTest extentTest;
     }
 
     public static void initTest(String testName){
-        extentTest=extentReporter.createTest(testName);
+        extentTest.set(extentReporter.createTest(testName));
     }
 
     public static void log(Status logStatus,String message) {
@@ -37,7 +37,7 @@ static ExtentTest extentTest;
             case INFO:
             case WARNING:
             case SKIP:
-                extentTest.log(logStatus, message);
+                extentTest.get().log(logStatus, message);
         }
     }
 
@@ -48,7 +48,7 @@ static ExtentTest extentTest;
                 case INFO:
                 case WARNING:
                 case SKIP:
-                    extentTest.addScreenCaptureFromPath(takeScreenShot(),message);
+                    extentTest.get().addScreenCaptureFromPath(takeScreenShot(),message);
             }
     }
 

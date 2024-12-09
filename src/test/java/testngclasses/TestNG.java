@@ -1,15 +1,5 @@
 package testngclasses;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import pom.ChekOutPage;
-import pom.LoginPage;
-import pom.ProductsPage;
-import utils.TestData;
-import webdriver.WebDriverManager;
-
 public class TestNG {
 
 //    @BeforeMethod

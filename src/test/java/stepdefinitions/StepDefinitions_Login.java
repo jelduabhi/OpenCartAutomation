@@ -37,11 +37,11 @@ public class StepDefinitions_Login extends WebDriverManager{
     @And("user add the product {string}")
     public void user_add_the_product(String testCaseID) {
         TestData.readTestData(testCaseID);
-        productsPage.addProduct();
+        productsPage.addProduct(TestData.getData("source"));
     }
-    @Then("product should be added to the cart")
+    @Then("product should be deleted to the cart")
     public void product_should_be_added_to_the_cart() throws IOException {
-        productsPage.varifyPriceWithFilter();
+        productsPage.validateProductIsDeleted();
     }
 
     @Then("user should be checkout the product")

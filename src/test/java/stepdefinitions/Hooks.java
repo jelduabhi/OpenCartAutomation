@@ -3,11 +3,11 @@ package stepdefinitions;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import utils.CommonMethods;
 import utils.ExtentReporter;
 import webdriver.WebDriverManager;
-
-import static webdriver.WebDriverManager.getDriver;
 
 public class Hooks {
 
@@ -15,6 +15,11 @@ public class Hooks {
     CommonMethods methods=new CommonMethods();
     WebDriverManager driverManager=new WebDriverManager();
 
+    @Parameters("Browser")
+    @BeforeTest
+    public void initBrowser(String browser){
+        WebDriverManager.browserName=browser;
+    }
     @Before
     public void initScenario(Scenario sce){
         Hooks.scenario=sce;

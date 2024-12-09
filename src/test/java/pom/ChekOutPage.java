@@ -1,14 +1,11 @@
 package pom;
 
 import com.aventstack.extentreports.Status;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.CommonMethods;
 import utils.ExtentReporter;
 import utils.TestData;
-
-import static webdriver.WebDriverManager.getDriver;
 
 public class ChekOutPage extends InitElements{
 

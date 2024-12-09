@@ -10,29 +10,31 @@ import java.time.Duration;
 
 public class WebDriverManager {
 
+static ThreadLocal<WebDriver>driver=new ThreadLocal<>();
 
-    static public WebDriver driver;
+public static  String browserName="Chrome";
+byte a='c';
 
-    public static void initBrowser(String browserName) {
+    public static void initBrowser() {
         if (browserName.equalsIgnoreCase("Chrome")) {
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
+            driver.set(new ChromeDriver());
+            driver.get().manage().window().maximize();
         } else if ("Edge".equalsIgnoreCase(browserName)) {
-            driver = new EdgeDriver();
-            driver.manage().window().maximize();
+            driver.set(new EdgeDriver());
+            driver.get().manage().window().maximize();
         }
-        driver.get(ConfigManager.getProperty("URL"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.get().get(ConfigManager.getProperty("URL"));
+        driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
     public static WebDriver getDriver(){
-        return driver;
+        return driver.get();
     }
     public void closeCurrentBrowser(){
-        driver.close();
+        driver.get().close();
     }
 
     public void closeAllBrowsers(){
-        driver.quit();
+        driver.get().quit();
     }
 }

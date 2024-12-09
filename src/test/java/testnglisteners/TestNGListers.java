@@ -10,7 +10,7 @@ import webdriver.WebDriverManager;
 public class TestNGListers implements ITestListener {
 
     public void onTestStart(ITestResult result) {
-        WebDriverManager.initBrowser("chrome");
+        WebDriverManager.initBrowser();
     }
 
     public void onTestSuccess(ITestResult result) {

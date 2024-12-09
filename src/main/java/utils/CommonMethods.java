@@ -1,6 +1,7 @@
 package utils;
 
 import com.aventstack.extentreports.Status;
+import dev.failsafe.internal.util.Assert;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
@@ -29,6 +30,28 @@ public class CommonMethods {
             //ExtentReporter(Status.INFO,ele+" is clicked");
         }catch (Exception e){
             //ExtentReporter(Status.FAIL,ele+" is not clicked "+e.getMessage());
+        }
+    }
+
+    public boolean isElementNotPresent(WebElement ele){
+        try{
+            ele.isDisplayed();
+            ExtentReporter.log(Status.FAIL,"Element is present");
+            return false;
+        }catch (Exception e){
+            ExtentReporter.log(Status.PASS,"Element is not Present");
+            return true;
+        }
+    }
+
+    public boolean isElementIsPresent(WebElement ele){
+        try{
+            ele.isDisplayed();
+            ExtentReporter.log(Status.PASS,"Element is present");
+            return true;
+        }catch (Exception e){
+            ExtentReporter.log(Status.FAIL,"Element is not Present");
+            return false;
         }
     }
 

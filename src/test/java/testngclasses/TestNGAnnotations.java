@@ -33,7 +33,7 @@ public class TestNGAnnotations extends TestNGMethods {
     @Parameters({"URL","BROWSER"})
     @Test(groups = "sample")
     public void launchBrowser(String url,String browser){
-        WebDriverManager.initBrowser(browser);
+        WebDriverManager.initBrowser();
     }
 
 }

@@ -8,7 +8,7 @@ public class ConfigManager {
     public static String getProperty(String key){
         Properties properties=new Properties();
         try{
-            FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\resources\\ConfigProperty.properties");
+            FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\ConfigProperty.properties");
             properties.load(fis);
             return properties.getProperty(key);
         }catch (Exception e){
